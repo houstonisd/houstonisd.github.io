@@ -1,0 +1,110 @@
+@media (max-width: 767.98px) {
+	body {
+		font-family: 'IBM Plex Sans Condensed', 'Roboto', 'Segoe UI', 'Tahoma', sans-serif !important;
+	}
+}
+@media (min-width: 768px) {
+	body {
+		font-family: 'IBM Plex Sans', 'Roboto', 'Segoe UI', 'Verdana', sans-serif !important;
+	}
+}
+html {
+	font-size: 16px;
+}
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+	overflow-y: scroll;
+}
+#box2 {
+	z-index: 1000;
+}
+#box2 {
+	z-index: 500;
+}
+#scroll-indicator {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	-webkit-backdrop-filter: blur(1rem);
+	background: white;
+	color: black !important;
+	opacity: 0.75;
+	z-index: 9999999;
+	animation-direction: normal;
+	animation-delay: none;
+	animation-duration: 3s;
+	animation-name: slideout;
+	animation-fill-mode: both;
+	animation-play-state: paused;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(1, 0, 1, 1);
+}
+#shadowbox {
+	z-index: 100;
+	min-height: calc(100vh - 30px - 1rem);
+}
+.btn {
+	min-width: 50% !important;
+}
+.underline {
+	text-decoration: underline !important;
+}
+.unlink, .unlink:link, .unlink:hover, .unlink:active {
+  color: unset !important;
+  text-decoration: unset !important;
+}
+small {
+	font-size: 75% !important;
+	display: block;
+}
+.bold {
+	font-weight: bold !important;
+}
+html body #unbold {
+	font-weight: normal !important;
+}
+html body .bg-primary,
+html body .btn-primary {
+	background: #3f92d0 !important;
+}
+html body .bg-secondary,
+html body .btn-secondary {
+	background: #ddb146 !important;
+}
+html body .bg-danger,
+html body .btn-danger {
+	background: #DD2C00 !important;
+}
+a:not(.unlink):not(.btn),
+a:not(.unlink):not(.btn) *,
+html body .text-primary {
+	color: #3f92d0 !important;
+}
+.btn {
+	border: none !important;
+}
+.one, .one * {
+	line-height: 1.1 !important;
+}
+.bg-light {
+	background: #f0f0f0 !important;
+}
+@keyframes slideout {
+	0%, 25% {
+		bottom: 0;
+		box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+	}
+	50% {
+		bottom: calc(-2.125rem - 1px);
+		box-shadow: 0 0 2rem 1rem black;
+	}
+	100% {
+		bottom: calc(-4.125rem - 1px);
+	}
+}
